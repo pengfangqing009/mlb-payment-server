@@ -12,17 +12,14 @@
       "dest": "/api/index.js"
     },
     {
-      "src": "/health",
-      "dest": "/api/health"
-    },
-    {
       "src": "/",
-      "dest": "/api/health"
+      "dest": "/api/index.js"
     }
   ],
   "functions": {
     "api/index.js": {
-      "maxDuration": 30
+      "maxDuration": 30,
+      "memory": 1024
     }
   }
 }
