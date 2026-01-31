@@ -1,4 +1,5 @@
 {
+  "regions": ["hkg1"], // 指定香港区域，减少网络延迟
   "version": 2,
   "builds": [
     {
