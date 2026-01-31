@@ -2,7 +2,7 @@
 const https = require('https');
 
 // 替换为您的Vercel域名
-const VERCEL_DOMAIN = '您的项目名.vercel.app';
+const VERCEL_DOMAIN = 'mlb-payment-server.vercel.app';
 
 async function checkDeployment() {
   console.log('🔍 开始检查Vercel部署状态...\n');
@@ -133,3 +133,9 @@ function testPostEndpoint(path, data) {
 
 // 执行检查
 checkDeployment().catch(console.error);
+
+// 同时测试直接访问
+console.log('\n🔗 直接访问测试:');
+console.log(`健康检查: https://${VERCEL_DOMAIN}/api/health`);
+console.log(`预下单接口: https://${VERCEL_DOMAIN}/api/payment/pre-order`);
+console.log('请在浏览器中打开以上链接测试访问');
